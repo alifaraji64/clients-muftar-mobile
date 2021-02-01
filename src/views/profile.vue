@@ -1,5 +1,41 @@
 <template>
   <main class="min-h-screen mb-10">
+    <!-- MODAL -->
+    <article
+      id="modal-1"
+      class="h-screen absolute w-full flex justify-center items-center"
+      v-if="isModalOpen"
+    >
+      <section
+        id="overlay"
+        class="bg-gray-700 opacity-70 w-full h-full z-20 fixed top-0 left-0"
+      ></section>
+      <section
+        id="content"
+        class="bg-white w-7/8 relative z-30 flex items-center flex-col"
+      >
+        <h2
+          class="text-gray-700 text-2xl font-bold border-b-8 border-primary py-2"
+        >
+          WARNING
+        </h2>
+        <p class="text-center mt-2 font-medium mb-2">
+          You're about to log out. Are you sure you wish to logout?
+        </p>
+        <button
+          class="bg-primary px-6 py-1 text-white text-lg font-semibold my-1"
+        >
+          Logout
+        </button>
+        <button
+          class="bg-primary px-6 py-1 text-white text-lg font-semibold mt-1 mb-3"
+          @click="isModalOpen = !isModalOpen"
+        >
+          Return
+        </button>
+      </section>
+    </article>
+    <!-- MODAL -->
     <TopNav />
     <section id="main">
       <h3 class="text-primary font-bold text-center">Account</h3>
@@ -60,7 +96,8 @@
         </div>
         <div id="row" class="flex justify-center items-center my-2">
           <button
-            class="bg-primary text-white font-semibold px-2 py-1 rounded-sm mt-10"
+            class="bg-primary text-white font-semibold px-2 py-1 rounded-sm mt-4"
+            @click="isModalOpen = !isModalOpen"
           >
             <i class="fas fa-sign-out-alt mr-2"></i>LOGOUT
           </button>
@@ -76,6 +113,11 @@ import NavBar from "@/components/NavBar.vue";
 import TopNav from "@/components/TopNav.vue";
 export default {
   components: { NavBar, TopNav },
+  data() {
+    return {
+      isModalOpen: false,
+    };
+  },
 };
 </script>
 

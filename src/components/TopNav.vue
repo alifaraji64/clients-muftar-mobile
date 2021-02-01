@@ -21,14 +21,15 @@
 export default {
   mounted() {
     let activeLink = document.querySelector("#link> .router-link-exact-active");
-    console.log(activeLink);
-    activeLink.classList.remove("text-primary");
-    activeLink.classList.add("text-white");
-    activeLink.classList.add("bg-primary");
-    activeLink.classList.add("pt-2");
-    activeLink.classList.add("rounded-full");
-    activeLink.classList.add("border-2");
-    activeLink.classList.add("border-primary");
+    if (activeLink) {
+      activeLink.classList.remove("text-primary");
+      activeLink.classList.add("text-white");
+      activeLink.classList.add("bg-primary");
+      activeLink.classList.add("pt-2");
+      activeLink.classList.add("rounded-full");
+      activeLink.classList.add("border-2");
+      activeLink.classList.add("border-primary");
+    }
   },
 };
 </script>

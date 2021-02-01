@@ -1,18 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <link rel="icon" href="<%= BASE_URL %>favicon.ico">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
-    <title><%= htmlWebpackPlugin.options.title %></title>
-  </head>
-  <body>
-    <noscript>
-      <strong>We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
-    </noscript>
-    <div id="app"></div>
-    <!-- built files will be auto injected -->
-  </body>
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width,initial-scale=1.0" />
+		<link rel="icon" href="<%= BASE_URL %>favicon.ico" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
+		<link rel="manifest" href="./manifest.json" />
+		<title><%= htmlWebpackPlugin.options.title %></title>
+		<!-- for safari we have to add some other meta tags to make it similar!! to pwa -->
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+		<meta name="apple-mobile-web-app-title" content="PWAGram" />
+		<link rel="apple-touch-icon" href="./assets/images/logo.png" />
+		<!-- for safari we have to add some other meta tags to make it similar!! to pwa -->
+		<!-- for internet explorer -->
+		<meta name="msapplication-TileImage" content="./assets/images/logo.png" />
+		<meta name="msapplication-TileColor" content="#fff" />
+		<meta name="theme-color" content="#3f51b5" />
+	</head>
+	<body>
+		<noscript>
+			<strong
+				>We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work properly without JavaScript
+				enabled. Please enable it to continue.</strong
+			>
+		</noscript>
+		<div id="app"></div>
+		<script src="./assets/js/app.js"></script>
+	</body>
 </html>

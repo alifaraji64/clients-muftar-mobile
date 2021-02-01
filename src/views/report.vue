@@ -1,10 +1,42 @@
 <template>
   <main class="min-h-screen mb-10">
+    <!-- MODAL -->
+    <article
+      id="modal-1"
+      class="h-screen absolute w-full flex justify-center items-center"
+      v-if="isModalOpen"
+    >
+      <section
+        id="overlay"
+        class="bg-gray-700 opacity-70 w-full h-full z-20 fixed top-0 left-0"
+      ></section>
+      <section
+        id="content"
+        class="bg-white w-7/8 relative z-30 flex items-center flex-col"
+      >
+        <h2
+          class="text-gray-700 text-2xl font-bold border-b-8 border-primary py-2"
+        >
+          YOU AREN'T DONE
+        </h2>
+        <p class="text-center mt-2 font-medium mb-2">
+          Since this report is labeled as an accident, you must submit images of
+          the accident and the police report(if available)
+        </p>
+        <button
+          class="bg-primary px-6 py-1 text-white text-lg font-semibold my-3"
+          @click="isModalOpen = !isModalOpen"
+        >
+          GO BACK
+        </button>
+      </section>
+    </article>
+    <!-- MODAL -->
     <TopNav />
     <section id="main">
       <h3 class="text-primary font-bold text-center">Report a Problem</h3>
       <div
-        class="border-2 border-gray-400 rounded-lg py-2 px-2 w-6/7 mx-auto mt-4 font-semibold"
+        class="border-2 border-gray-400 rounded-lg py-2 px-2 w-7/8 mx-auto mt-4 font-semibold"
       >
         <div id="row" class="flex justify-between items-center my-3">
           <section id="item">
@@ -102,7 +134,9 @@
             id="item"
             class="w-6/7 text-center mx-auto mt-12 text-primary"
           >
-            <button><i class="fab fa-telegram-plane fa-2x"></i></button>
+            <button @click="isModalOpen = !isModalOpen">
+              <i class="fab fa-telegram-plane fa-2x"></i>
+            </button>
           </section>
         </div>
       </div>
@@ -116,6 +150,11 @@ import NavBar from "@/components/NavBar.vue";
 import TopNav from "@/components/TopNav.vue";
 export default {
   components: { NavBar, TopNav },
+  data() {
+    return {
+      isModalOpen: false,
+    };
+  },
 };
 </script>
 

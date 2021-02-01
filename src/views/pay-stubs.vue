@@ -2,7 +2,7 @@
   <main class="min-h-screen mb-20">
     <TopNav />
     <section id="main">
-      <h3 class="text-primary font-bold text-center mb-2">Load History</h3>
+      <h3 class="text-primary font-bold text-center mb-2">Paystubs</h3>
       <div class="rounded-xl w-7/8 mx-auto text-sm">
         <div id="search" class="flex items-center mb-2">
           <div
@@ -22,19 +22,19 @@
           id="labels"
           class="flex justify-around mx-auto text-xs font-semibold"
         >
-          <p>Load no</p>
-          <p>Pickup</p>
-          <p>Delivery</p>
-          <p>Payout</p>
+          <p>Week Start</p>
+          <p>Week End</p>
+          <p>Pay Date</p>
+          <p>Paystub</p>
           <p>Info</p>
         </div>
         <div
           id="each-load"
-          class="flex justify-around mx-auto text-sm font-semibold border-primary border-2 rounded-xl py-0.5 my-1"
+          class="flex justify-around mx-auto text-xs font-semibold border-primary border-2 rounded-xl py-0.5 my-1"
           v-for="k in 20"
           :key="k"
         >
-          <h3 class="text-blue-600 font-semibold">034132</h3>
+          <h3 class="text-gray-600 font-semibold">Dec 14,2020</h3>
           <h3 class="text-gray-600 font-semibold">Dec 14,2020</h3>
           <h3 class="text-gray-600 font-semibold">Dec 14,2020</h3>
           <h3 class="text-gray-600 font-semibold">

@@ -1,12 +1,11 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import Home from '../views/Home.vue'
 
 Vue.use(VueRouter)
 
 const routes = [
   {
-    path: '/login',
+    path: '/',
     name: 'login',
     component: ()=> import('@/views/login.vue')
   },
@@ -34,6 +33,11 @@ const routes = [
     path: '/load-history',
     name: 'load-history',
     component: ()=> import('@/views/load-history.vue')
+  },
+  {
+    path: '/pay-stubs',
+    name: 'pay-stubs',
+    component: ()=> import('@/views/pay-stubs.vue')
   },
 ]
 

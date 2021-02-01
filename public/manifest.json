@@ -1,0 +1,29 @@
+{
+    "name":"muftar digital",
+    "short_name":"muftar digital",
+    "icons":[
+        {
+           "src":"./assets/images/logo_96x96.png",
+           "type":"image/png",
+           "sizes":"96x96"
+       },
+       {
+          "src":"./assets/images/logo_144x144.png",
+          "type":"image/png",
+          "sizes":"144x144"
+       },
+       {
+          "src":"./assets/images/logo_192x192.png",
+          "type":"image/png",
+          "sizes":"192x192"
+       }
+          ],
+    "start_url":"./index.html",
+    "scope":".",
+    "display":"fullscreen",
+    "orientation":"portrait-primary",
+    "background_color":"green",
+    "theme_color":"green",
+    "dir":"ltr",
+    "language":"en-US"
+}
